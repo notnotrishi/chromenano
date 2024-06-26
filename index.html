@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Nano - Run Gemini Nano Locally</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/window-ai/0.4.6/window-ai.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #promptInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #submitButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chrome Nano - Run Gemini Locally</h1>
+    <input type="text" id="promptInput" placeholder="Enter your prompt here">
+    <button id="submitButton">Submit</button>
+    <div id="response"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const promptInput = document.getElementById('promptInput');
+            const submitButton = document.getElementById('submitButton');
+            const responseDiv = document.getElementById('response');
+
+            submitButton.addEventListener('click', async () => {
+                const prompt = promptInput.value;
+                if (prompt) {
+                    try {
+                        responseDiv.textContent = 'Processing...';
+                        const session = await window.ai.createTextSession();
+                        const response = await session.prompt(prompt);
+                        responseDiv.textContent = response;
+                    } catch (error) {
+                        responseDiv.textContent = `Error: ${error.message}`;
+                    }
+                } else {
+                    responseDiv.textContent = 'Please enter a prompt';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
