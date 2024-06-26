@@ -24,3 +24,6 @@ Step 2: Down the code (index.html) from this repo and open it in Chrome Canary d
 Step 3: Enter a prompt and test it out. It should work without wifi/locally. Note that the reponses might be slow (local) and not be reliable (as expected with any LLM)
 
 Note: This is just a demo and not meant for regular or commercial uses.
+
+Also, huge shoutout to the folks behind windowai
+
