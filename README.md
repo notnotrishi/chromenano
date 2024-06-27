@@ -34,3 +34,7 @@ Note: This is just a demo and not meant for regular or commercial uses.
 
 Also, huge shoutout to the folks behind windowai
 
+**Edit: 27 Jun**
+Some udpates today from Google team. Please refer to it in case of any issues --
+https://docs.google.com/document/d/1VG8HIyz361zGduWgNG7R_R8Xkv0OOJ8b5C9QKeCjU0c/edit#heading=h.5s2qlonhpm36
+
